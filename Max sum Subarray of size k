@@ -1,0 +1,14 @@
+ def maximumSumSubarray (self,K,Arr,N):
+        cs=0
+        ms=0
+        for i in range(K):
+            cs+=Arr[i]
+        ms=cs
+        i=0
+        j=K
+        while(j<N):
+            cs=cs-Arr[i]+Arr[j]
+            i+=1
+            j+=1
+            ms=max(cs,ms)
+        return ms
